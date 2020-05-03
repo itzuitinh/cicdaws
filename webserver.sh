@@ -9,3 +9,15 @@ yum install -y php70 php70-php php70-php-fpm php70-php-pecl-memcached php70-php-
 ln -s /usr/bin/php70 /usr/bin/php
 service httpd start
 chkconfig httpd on
+
+
+NameVirtualHost *:81
+<VirtualHost *:81>
+    DocumentRoot /var/www/html/xuandieucicd/
+    <Directory "/var/www/html/xuandieucicd">
+      Order deny,allow
+      Allow from all
+      AllowOverride All
+      Require all granted
+   </Directory>
+</VirtualHost>
