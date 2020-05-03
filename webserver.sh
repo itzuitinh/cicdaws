@@ -21,3 +21,8 @@ NameVirtualHost *:81
       Require all granted
    </Directory>
 </VirtualHost>
+
+ssh -T -i ]/home/jenkins/key_web.pem www-user@3.86.230.98 << EOF
+cd /var/www/html/xuandieucicd
+git pull
+EOF
